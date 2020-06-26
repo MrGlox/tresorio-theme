@@ -1,0 +1,21 @@
+.page {
+  &__content {
+    position: relative;
+    padding: 110px 0 0;
+  }
+
+  &__hexa {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: auto;
+    min-width: 800px;
+    width: 100vw;
+    max-width: 1500px;
+    transform: translateX(-50%) translateY(10%);
+
+    @include breakpoints(sm) {
+      min-width: 1400px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.template-blog {
+  .page__content {
+    @include breakpoints(xsm) {
+      padding: $spxxxl $spxxxl;
+    }
+
+    @include breakpoints(md) {
+      padding: $spxxxl $spxxl;
+    }
+
+    @include breakpoints(lg) {
+      padding: $spxxxl $spxxxl;
+    }
+  }
+}

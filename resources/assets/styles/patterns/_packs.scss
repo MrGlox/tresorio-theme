@@ -1,0 +1,190 @@
+.packs {
+  $el: &;
+
+  #{$el}__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: $spxl;
+  }
+
+  #{$el}__title {
+    text-align: center;
+    margin-bottom: $sp;
+    width: 100%;
+
+    @include breakpoints(xsm) {
+      width: span(5);
+    }
+
+    &--sub {
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: $spl;
+      font-size: 22px;
+      width: initial;
+      white-space: nowrap;
+    }
+  }
+
+  #{$el}__text {
+    text-align: center;
+    max-width: 440px;
+
+    & > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  #{$el}__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -#{gutter() / 2};
+    width: #{100% + gutter()};
+
+    @include breakpoints(xsm) {
+      flex-direction: row;
+    }
+
+    @include breakpoints(lg) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  #{$el}__item {
+    display: flex;
+    flex-direction: column;
+    background-color: $lightcolor;
+    box-shadow: $shadow--larger;
+    min-width: 200px;
+    padding: $sp;
+    margin: 0 #{gutter() / 2};
+
+    &:not(:last-child) {
+      margin-bottom: $sp;
+    }
+
+    @include breakpoints(xsm) {
+      width: span(5);
+    }
+
+    @include breakpoints(md) {
+      width: span(3);
+      &:nth-last-child(2) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include breakpoints(lg) {
+      width: span(0);
+      margin-bottom: 0;
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    &-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      position: relative;
+      z-index: 1;
+      min-height: 70px;
+      margin-bottom: $sp;
+    }
+
+    &-title {
+      align-self: center;
+      text-align: center;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+
+    &-short {
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      font-size: 70px;
+      line-height: 70px;
+      font-weight: 800;
+      color: rgba($secondary, 0.2);
+      transform: translateY(-50%) translateX(-50%);
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: $sp;
+    }
+
+    &-item {
+      margin-bottom: $sps;
+    }
+
+    &-link {
+      @include button;
+      @include button--colored(
+        $darkcolor,
+        $lightcolor,
+        lighten($darkcolor, 4%)
+      );
+
+      white-space: nowrap;
+      text-align: center;
+      padding: $spxxs $spxxxs;
+      font-size: $fszs;
+      font-weight: 700;
+      border-radius: $brs;
+      min-width: 140px;
+      width: 100%;
+    }
+
+    &-price {
+      text-align: center;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 30px;
+      color: $darkcolor;
+    }
+
+    &-value {
+      font-size: 30px;
+      line-height: 30px;
+      color: $secondary;
+      font-weight: 700;
+      letter-spacing: -1px;
+      padding: 0;
+    }
+
+    &-currency {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 60px;
+      color: $secondary;
+      margin: 0 3px;
+    }
+
+    &-icon {
+      height: 20px;
+      width: 20px;
+      margin-right: $spxxs;
+    }
+  }
+}

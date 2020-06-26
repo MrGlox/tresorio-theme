@@ -1,0 +1,139 @@
+.page-template-page-contact {
+  .wrap {
+    padding: 0;
+  }
+
+  .header {
+    top: $sp;
+    margin-top: 0;
+    background-color: $lightcolor;
+    box-shadow: $shadow;
+  }
+
+  .menu-trigger {
+    top: $sp;
+  }
+
+  //   .header--fixed {
+  //     margin-top: $sps;
+
+  //     @include breakpoints(sm) {
+  //       margin-top: $spxxs;
+  //     }
+
+  //     @include breakpoints(md) {
+  //       margin-top: 0;
+  //     }
+
+  //     & > .container {
+  //       max-width: 800px;
+  //       padding: 0 $sps;
+
+  //       @include breakpoints(xsm) {
+  //         max-width: 800px;
+  //         padding: 0 $spxxxl;
+  //       }
+
+  //       @include breakpoints(md) {
+  //         max-width: 1120px;
+  //       }
+  //     }
+  //   }
+
+  .contact {
+    &__inner {
+      min-height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column-reverse;
+
+      @include breakpoints(md) {
+        flex-direction: row;
+      }
+    }
+
+    &__map {
+      display: flex;
+      justify-content: stretch;
+      align-content: stretch;
+      align-items: stretch;
+      min-height: 350px;
+
+      @include breakpoints(md) {
+        width: 50vw;
+        min-height: inherit;
+      }
+
+      & > .map {
+        width: 100vw;
+        height: 100%;
+        min-height: 350px;
+        background-color: $primary--saturated;
+
+        @include breakpoints(md) {
+          width: 50vw;
+        }
+      }
+    }
+
+    &__content {
+      min-height: 75vh;
+      background-color: $primary--saturated;
+
+      @include breakpoints(md) {
+        width: 50vw;
+        padding-top: $spxxxl;
+      }
+
+      & > .container {
+        max-width: 800px;
+        padding: 180px $sps $spxl;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include breakpoints(xsm) {
+          padding: 180px $spxxxl $spxxxl;
+        }
+
+        @include breakpoints(md) {
+          padding: $spxxxl $spxxl;
+        }
+
+        @include breakpoints(lg) {
+          padding: $spxxxl $spxxxl;
+        }
+      }
+    }
+
+    &__header {
+      margin-bottom: $spl;
+    }
+
+    &__title {
+      font-family: $mainfont;
+      color: $lightcolor;
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 400;
+      margin-bottom: 0;
+      max-width: 400px;
+
+      @include breakpoints(xsm) {
+        font-size: 40px;
+        line-height: 52px;
+      }
+    }
+  }
+
+  .hbspt-form {
+    label {
+      color: $lightcolor;
+      margin-bottom: $spxxxs;
+
+      .hs-form-required {
+        color: $error;
+      }
+    }
+  }
+}

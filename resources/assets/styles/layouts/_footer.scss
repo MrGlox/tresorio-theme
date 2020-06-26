@@ -1,0 +1,178 @@
+.footer {
+  $el: &;
+  $main: ".footer";
+
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  background-color: transparent;
+
+  #{$el}__newsletter {
+    width: 105vw;
+    max-width: 900px;
+    margin: 0 auto -#{$spxxxl};
+  }
+
+  #{$el}__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: $spxxl 0 $spxxs;
+
+    &:after {
+      @include pseudo__content;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 50%;
+      width: 101vw;
+      height: 100%;
+      background-color: $lightcolor;
+      transform: translateX(-50%);
+    }
+  }
+
+  #{$el}__columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-bottom: $spl;
+
+    @include breakpoints(xsm) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include breakpoints(md) {
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      align-content: flex-start;
+    }
+  }
+
+  #{$el}__coords {
+    order: 1;
+    width: 100%;
+    margin-bottom: $spxl;
+
+    @include breakpoints(md) {
+      order: 1;
+      width: span(3) + gutter();
+      margin-right: span(1);
+      margin-bottom: 0;
+    }
+
+    &-content {
+      font-size: 16px;
+      font-weight: 500;
+      color: $primary;
+      text-align: center;
+
+      @include breakpoints(md) {
+        text-align: left;
+      }
+
+      & > p {
+        margin-bottom: $spxxs;
+      }
+    }
+  }
+
+  #{$el}__brand {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $sp;
+
+    .brand__container {
+      max-width: 260px;
+    }
+  }
+
+  #{$el}__links {
+    order: 3;
+    width: 100%;
+
+    @include breakpoints(xsm) {
+      width: span(4);
+      margin-left: span(2);
+    }
+
+    @include breakpoints(md) {
+      order: 1;
+      width: span(2);
+      margin-right: span(1);
+      margin-left: 0;
+    }
+  }
+
+  #{$el}__details {
+    order: 3;
+    width: 100%;
+
+    @include breakpoints(xsm) {
+      margin-right: span(1);
+      width: span(5) + gutter();
+    }
+
+    @include breakpoints(md) {
+      order: 1;
+      width: span(3) + gutter();
+      margin-right: span(1);
+    }
+  }
+
+  #{$el}__socials {
+    order: 2;
+    margin-bottom: $sps;
+    width: 100%;
+
+    @include breakpoints(xsm) {
+      width: span(6);
+    }
+
+    @include breakpoints(md) {
+      width: span(3);
+    }
+
+    .socials__link {
+      border: solid 1px $bordergrey;
+      color: $bordergrey;
+    }
+  }
+
+  #{$el}__copyright {
+    position: relative;
+    width: span(12);
+    padding: $sps 0;
+
+    &:after {
+      @include pseudo__content;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: span(10);
+      height: 1px;
+      background-color: $secondary;
+      transform: translateX(-50%);
+    }
+
+    & > p {
+      text-align: center;
+      margin-bottom: 0;
+      color: $primary;
+      font-size: $fszxs;
+    }
+  }
+
+  &--with-newsletter {
+    overflow: hidden;
+    padding-top: $spxxxs;
+    margin-top: -230px;
+
+    #{$el}__content {
+      padding: $spxxxxl 0 $spxxs;
+    }
+  }
+}

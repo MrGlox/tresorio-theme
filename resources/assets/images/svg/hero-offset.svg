@@ -1,0 +1,21 @@
+<svg viewBox="0 0 2500 2411" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path id="hero-offset-a" d="M0 0h2500v2551H0z"/>
+    <path id="hero-offset-d" d="M0 2410.556l1562.5-914.146L0 599.792z"/>
+    <filter x="-9.7%" y="-5.8%" width="112.9%" height="108.6%" filterUnits="objectBoundingBox" id="hero-offset-c">
+      <feOffset dx="-82" dy="-35" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur stdDeviation="9.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0384069056 0" in="shadowBlurOuter1"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="hero-offset-b" fill="#fff">
+      <use xlink:href="#hero-offset-a"/>
+    </mask>
+    <path fill="#F3F7FF" mask="url(#hero-offset-b)" d="M0-2.639v603.26l1536.22 881.115L2500 920.373V-20z"/>
+    <g mask="url(#hero-offset-b)">
+      <use fill="#000" filter="url(#hero-offset-c)" xlink:href="#hero-offset-d"/>
+      <use fill="#F7F9FF" xlink:href="#hero-offset-d"/>
+    </g>
+  </g>
+</svg>

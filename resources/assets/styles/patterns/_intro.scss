@@ -1,0 +1,96 @@
+.intro {
+  $el: &;
+
+  position: relative;
+  z-index: 2;
+  min-height: 460px;
+  background-color: $mediumgrey;
+
+  #{$el}__offset {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    min-width: 100vw;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  #{$el}__container {
+    & > .breadcrumbs {
+      margin-bottom: $spxxl;
+    }
+  }
+
+  #{$el}__content {
+    max-width: 740px;
+    margin: 0 auto;
+
+    & > p.intro__title {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 30px;
+      line-height: 45px;
+      line-height: $hlh;
+      font-weight: 600;
+      color: $darkcolor;
+      font-family: $headingsfont;
+
+      @include breakpoints(sm) {
+        font-size: 46px;
+        line-height: 60px;
+      }
+
+      @include breakpoints(md) {
+        font-size: 50px;
+        line-height: 60px;
+      }
+    }
+  }
+
+  #{$el}__title {
+    text-align: center;
+    margin-bottom: $spl;
+    padding: 0 span(1);
+  }
+
+  #{$el}__text {
+    text-align: center;
+
+    & > p {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $primary;
+
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  #{$el}__button {
+    @include button;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+
+    @include hover {
+      transform: translateX(-50%) translateY(calc(50% - 3px));
+    }
+  }
+
+  &--single {
+    padding: 150px 0 200px;
+
+    #{$el}__title {
+      margin-bottom: 0;
+    }
+  }
+
+  &--with-button {
+    padding: 150px 0 120px;
+  }
+}

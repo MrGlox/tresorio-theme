@@ -1,0 +1,20 @@
+.page-template-page-press {
+  .entries__title {
+    font-size: $fsz;
+    line-height: $hlh;
+    font-weight: 600;
+
+    @include breakpoints(xxsm) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+
+  .wrap {
+    padding-bottom: 0;
+  }
+
+  .page__content .container > section:last-child {
+    padding-bottom: 320px;
+  }
+}

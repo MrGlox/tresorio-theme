@@ -1,0 +1,199 @@
+.entry {
+  $el: &;
+
+  #{$el}__container {
+    position: relative;
+    padding: $spxl $sp;
+    background-color: $lightcolor;
+    border-bottom: solid 1px $bordergrey;
+
+    @include breakpoints(xsm) {
+      padding: $spxl $spxxl;
+    }
+  }
+
+  #{$el}__header {
+    margin-bottom: $spl;
+  }
+
+  &__content {
+    font-size: $fszs;
+    line-height: 20px;
+    color: $grey;
+    margin-bottom: $spl;
+
+    @include breakpoints(md) {
+      font-size: $fsz;
+      line-height: 24px;
+    }
+
+    a {
+      text-decoration: underline;
+
+      @include hover {
+        color: $darkcolor;
+        font-weight: 600;
+      }
+    }
+
+    & > h1,
+    & > h2,
+    & > h3,
+    & > h4,
+    & > h5,
+    & > h6 {
+      font-family: $mainfont;
+      font-weight: 500;
+      margin-bottom: $sps;
+    }
+
+    & > h1 {
+      margin-top: 0;
+      font-size: 30px;
+      margin-bottom: $sp;
+      text-transform: initial !important;
+    }
+
+    & > h2 {
+      margin-top: $spxl;
+      font-size: 24px;
+    }
+
+    & > h3 {
+      margin-top: $sp;
+      font-size: 21px;
+    }
+
+    & > h4 {
+      font-size: 18px;
+    }
+
+    & > p {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: $spxs;
+
+      &:first-child {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+    & > figure {
+      margin: $spl 0 $spl;
+
+      iframe {
+        max-width: 100%;
+      }
+    }
+
+    & > blockquote {
+      position: relative;
+      z-index: 2;
+      color: $primary;
+      font-size: 34px;
+      line-height: 50px;
+      font-weight: 600;
+      font-style: inherit;
+      border-left: none;
+      padding-left: $spl;
+
+      &:after {
+        @include pseudo__content;
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 0;
+        width: 90px;
+        height: 90px;
+        background-image: url("#{$svg}/quote.svg");
+        background-repeat: no-repeat;
+        background-size: 100% auto, 100%;
+        transform: translateY(-50%);
+      }
+    }
+
+    strong {
+      font-weight: 600;
+      color: $darkcolor;
+    }
+
+    table {
+      margin-bottom: $spxl;
+    }
+  }
+
+  #{$el}__footer {
+    margin-bottom: $spxxs;
+
+    & > a {
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  #{$el}__meta {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: -#{gutter(10) / 2};
+    width: 100% + gutter(10);
+  }
+
+  #{$el}__author,
+  #{$el}__category,
+  #{$el}__date {
+    padding: $spxxs $sp;
+    border: solid 1px $primary;
+    border-radius: $brs;
+    margin: 0 gutter(10) / 2 $spxs;
+  }
+
+  // input {
+  //   outline: none;
+  //   border: 0;
+  //   border-bottom: 1px solid #5371ed;
+  //   height: 40px;
+  //   width: 50%;
+  //   transition: all 0.5s ease 0s;
+  // }
+
+  // input[type="text"]:hover,
+  // input[type="email"]:hover,
+  // input[type="tel"]:hover {
+  //   border-color: #03e2bc;
+  //   transition: all 0.5s ease 0s;
+  // }
+
+  // .input > input[type="text"]:focus label {
+  //   width: 15rem;
+  //   border-color: red 1px solid;
+  // }
+
+  // input [type="checkbox"] {
+  //   margin-right: 10px;
+  // }
+
+  // label {
+  //   width: inherit !important;
+  //   height: inherit !important;
+  //   position: relative !important;
+  //   left: 5%;
+  //   top: 30px;
+  //   font-size: 18px;
+  //   font-weight: 200;
+  //   color: #5371ed;
+  //   transition: all 0.5s ease;
+  //   pointer-events: none;
+  // }
+
+  // .hs-form-checkbox-display {
+  //   display: flex;
+  //   align-items: center;
+  // }
+
+  // .hs-form-checkbox-display > span {
+  //   margin-left: 10px;
+  // }
+}

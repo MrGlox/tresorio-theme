@@ -1,0 +1,396 @@
+$text-inputs-list: 'input[type="color"]', 'input[type="date"]',
+  'input[type="datetime"]', 'input[type="datetime-local"]',
+  'input[type="email"]', 'input[type="month"]', 'input[type="number"]',
+  'input[type="password"]', 'input[type="search"]', 'input[type="tel"]',
+  'input[type="text"]', 'input[type="time"]', 'input[type="url"]',
+  'input[type="week"]', "input:not([type])", "textarea";
+
+$all-text-inputs: assign-inputs($text-inputs-list);
+
+#{$all-text-inputs},
+textarea {
+  box-sizing: border-box;
+  line-height: 1;
+  width: 100%;
+  border: 1px solid $grey;
+  padding: $spxs;
+  font-family: $mainfont;
+  color: $textcolor;
+  background: darken($lightcolor, 5%);
+  border-radius: 0; //reset border radius for ios
+  transition: border-color 0.5s ease;
+  appearance: none;
+  resize: vertical;
+
+  @include placeholder {
+    color: lighten($textcolor, 50%);
+  }
+
+  &:hover {
+    border-color: darken($grey, 10%);
+  }
+
+  &:focus {
+    color: darken($textcolor, 10%);
+    border-color: darken($grey, 20%);
+  }
+}
+
+// Label
+label {
+  display: inline-block;
+  font-weight: 700;
+}
+
+// Custom select
+select {
+  @include select--custom;
+}
+
+// Checkbox + Radio
+.checkbox--custom {
+  @include checkbox--custom($primary);
+}
+
+.radio--custom {
+  @include checkbox--custom($primary);
+  @include radio--custom();
+}
+
+/** Search form */
+.search-form {
+  display: initial;
+}
+
+.search-form label {
+  font-weight: normal;
+}
+
+.search-form .search-field {
+  display: initial;
+}
+
+.search-form .search-submit {
+  display: initial;
+}
+
+.rangeslider {
+  position: relative;
+  height: 20px;
+  width: 100%;
+
+  &__fill__bg {
+    position: absolute;
+    top: 50%;
+    height: 6px;
+    width: 100%;
+    background-color: $mediumgrey;
+    border-radius: 10px;
+    transform: translateY(-50%);
+  }
+
+  &__fill {
+    position: absolute;
+    top: 50%;
+    height: 6px;
+    width: 0;
+    border-radius: 6px;
+    background-color: $primary;
+    // transition: width 0.3s ease-out;
+    align-self: center;
+    transform: translateY(-50%);
+  }
+
+  &__handle {
+    position: relative;
+    top: 50%;
+    height: 20px;
+    width: 20px;
+    border-radius: 14px;
+    background-color: $lightcolor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid $primary;
+    // transition: transform 0.3s ease-out;
+    transform: translateY(-50%);
+    box-shadow: $shadow;
+    user-select: none;
+    cursor: grab;
+
+    &-value {
+      position: absolute;
+      top: 14px;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 4px;
+      border-radius: 4px;
+      font-weight: 600;
+      color: rgb(60, 94, 235);
+    }
+  }
+
+  &__ticks {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: $grey;
+    transform: translateY(110%);
+    transition: opacity 0.3s ease;
+
+    &--max {
+      position: absolute;
+      right: 0;
+      left: inherit;
+    }
+
+    &.hidden {
+      opacity: 0;
+    }
+  }
+
+  &__container {
+    width: 100%;
+  }
+}
+
+.range {
+  &__container {
+    text-transform: uppercase;
+    font-size: $fszs;
+    color: $darkcolor;
+    margin-bottom: $spl;
+
+    & > input {
+      opacity: 0;
+    }
+  }
+
+  &__label {
+    text-transform: uppercase;
+    font-size: $fszs;
+    font-weight: 600;
+    color: $darkcolor;
+    margin-bottom: $spxxs;
+
+    &--small {
+      text-transform: initial;
+    }
+  }
+}
+
+.switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin-bottom: $spxs;
+  width: 100%;
+
+  &__title {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: $fszs;
+    font-weight: 600;
+    color: $darkcolor;
+    margin-bottom: 0;
+
+    &--small {
+      text-transform: initial;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 90px;
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+
+    span {
+      font-weight: 600;
+    }
+
+    input + .switch__container {
+      background-color: rgba(#03e2bc, 0.2);
+
+      .switch__slider {
+        transform: translateX(-50%) translateX(-32px) translateY(-50%);
+      }
+
+      .switch__pointer {
+        background-color: #03e2bc;
+      }
+
+      .switch__span {
+        color: $darkcolor;
+        font-size: $fszxs;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+      }
+    }
+
+    input:checked + .switch__container {
+      background-color: rgba($primary, 0.4);
+
+      .switch__slider {
+        transform: translateX(-50%) translateX(32px) translateY(-50%);
+      }
+
+      .switch__pointer {
+        background-color: $primary;
+      }
+    }
+  }
+
+  &__slider {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    top: 50%;
+    width: 128px;
+    transition: transform 0.3s ease;
+
+    & .switch__span:first-child {
+      text-align: right;
+    }
+  }
+
+  &__container {
+    position: relative;
+    background-color: rgba($primary, 0.5);
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 34px;
+    overflow: hidden;
+    min-width: 90px;
+    min-height: 25px;
+  }
+
+  &__pointer {
+    background-color: $primary;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    height: 16px;
+    width: 16px;
+    min-height: 16px;
+    min-width: 16px;
+  }
+
+  &__span {
+    margin: 0 6px;
+    font-size: $fszs;
+    text-transform: uppercase;
+    color: $darkcolor;
+    font-weight: 700;
+    pointer-events: none;
+    user-select: none;
+    min-width: 60px;
+  }
+}
+
+.hbspt-form {
+  position: relative;
+
+  & > form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: $spxs $sps $spxs;
+    border: solid 2px $lightcolor;
+    border-radius: $br;
+    background-color: $lightcolor;
+    font-size: $fszs;
+
+    @include breakpoints(sm) {
+      font-size: $fsz;
+    }
+
+    &.invalid {
+      border-color: $error;
+    }
+
+    &::placeholder {
+      color: $grey;
+      font-size: $fszs;
+
+      @include breakpoints(sm) {
+        font-size: $fsz;
+      }
+    }
+  }
+
+  textarea {
+    min-height: 160px;
+  }
+
+  .hs-form-field {
+    width: 100%;
+    margin-bottom: $spl + 5;
+  }
+
+  .hs_submit {
+    input {
+      @include button;
+      @include button--colored(
+        darken($secondary, 3%),
+        $lightcolor,
+        darken($secondary, 5%)
+      );
+
+      padding: $spxs $sps;
+      font-size: $fsz;
+      font-weight: 600;
+      border-radius: $brs;
+      width: span(2 of 6);
+      min-width: 180px;
+
+      @include hover {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .hs-error-msgs {
+    padding-left: $spxxxs;
+    margin-bottom: 0;
+
+    li {
+      color: $error;
+      font-weight: 400;
+    }
+  }
+
+  .hs_error_rollup {
+    @extend .visuallyhidden;
+
+    ul {
+      padding-left: 0;
+
+      li {
+        text-align: center;
+      }
+    }
+  }
+
+  .hs_recaptcha {
+    @extend .visuallyhidden;
+  }
+}

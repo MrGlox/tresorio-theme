@@ -1,0 +1,55 @@
+@keyframes translate-pulse {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -20px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes shadow-pulse {
+  0% {
+    transform: translate3d(0, 40%, 0) scale3d(0.9, 0.9, 0.9);
+  }
+
+  50% {
+    transform: translate3d(0, 40%, 0) scale3d(0.7, 0.7, 0.7);
+  }
+
+  100% {
+    transform: translate3d(0, 40%, 0) scale3d(0.9, 0.9, 0.9);
+  }
+}
+
+@keyframes translate-pulse-server {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 100, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes shadow-pulse-server {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(0.95, 0.95, 0.95);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}

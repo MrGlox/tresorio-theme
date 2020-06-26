@@ -1,0 +1,80 @@
+.facetwp {
+  .facetwp-type-search {
+    width: span(8);
+    margin: 0 auto $spxxs;
+  }
+
+  .facetwp-facet-categories {
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoints(sm) {
+      justify-content: flex-start;
+    }
+    margin-bottom: 0;
+
+    .facetwp-checkbox {
+      @include button;
+      @include button--outline($primary--saturated, $grey);
+      background-image: none !important;
+      margin-bottom: $spxs;
+      margin-right: gutter();
+      border-width: 1px;
+      padding: $spxs $sp;
+      font-weight: 500;
+      text-transform: inherit;
+      cursor: pointer;
+
+      @include hover {
+        color: $lightcolor;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.checked {
+        color: $lightcolor;
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+
+    .facetwp-counter {
+      display: none;
+    }
+  }
+}
+
+.facetwp-pager {
+  display: flex;
+  justify-content: center;
+
+  .facetwp-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    min-height: 36px;
+    min-width: 36px;
+    font-weight: 500;
+    color: $black;
+    font-size: $fszs;
+    padding: $spxxxs $spxs;
+    border: solid 1px $bordergrey;
+    transition: color 0.3s ease, background-color 0.3s ease,
+      border-color 0.3s ease, transform 0.3s ease;
+
+    @include hover {
+      color: $lightcolor;
+      background-color: $primary;
+      border-color: $primary;
+      transform: translateY(-3px);
+    }
+
+    &.active {
+      color: $lightcolor;
+      background-color: $primary;
+      border-color: $primary;
+    }
+  }
+}

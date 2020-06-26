@@ -1,0 +1,155 @@
+.server {
+  $el: &;
+  $main: ".server";
+
+  #{$el}__container {
+    display: flex;
+  }
+
+  #{$el}__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #{$el}__aside {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin-top: $spxl;
+
+    @include breakpoints(sm) {
+      width: span(6);
+      padding-left: gutter(6);
+    }
+  }
+
+  #{$el}__block {
+    width: 100%;
+
+    @include breakpoints(sm) {
+      width: span(5);
+      margin-right: span(1);
+    }
+  }
+
+  #{$el}__header {
+    white-space: normal;
+
+    @include breakpoints(sm) {
+      white-space: nowrap;
+    }
+
+    @include breakpoints(md) {
+      white-space: normal;
+    }
+  }
+
+  #{$el}__main {
+    margin-top: $spxl;
+    margin-bottom: $spl;
+  }
+
+  #{$el}__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-right: gutter();
+  }
+
+  #{$el}__title {
+    margin-bottom: $sp;
+    text-align: center;
+
+    @include breakpoints(md) {
+      text-align: left;
+    }
+
+    &--sub {
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: $spl;
+      font-size: 22px;
+      width: initial;
+
+      @include breakpoints(xsm) {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  #{$el}__text {
+    text-align: center;
+
+    @include breakpoints(md) {
+      text-align: left;
+    }
+
+    & > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  #{$el}__media {
+    margin-top: -$sp;
+    width: 100%;
+  }
+
+  #{$el}__price {
+    padding-right: $spxxxs;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    color: $darkcolor;
+
+    &--month {
+      #{$main}__price-hour {
+        display: none !important;
+      }
+
+      #{$main}__price-month {
+        display: initial !important;
+      }
+    }
+
+    &-month {
+      display: none;
+    }
+  }
+
+  #{$el}__value {
+    font-size: 60px;
+    line-height: 60px;
+    color: $secondary;
+    letter-spacing: -1px;
+  }
+
+  #{$el}__currency {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    color: $secondary;
+    margin: 0 3px;
+  }
+
+  #{$el}__link {
+    @include button;
+    @include button--colored(
+      darken($secondary, 3%),
+      $lightcolor,
+      darken($secondary, 5%)
+    );
+
+    white-space: nowrap;
+    text-align: center;
+    padding: $spxs $sps;
+    font-size: $fszs;
+    font-weight: 700;
+    border-radius: $brs;
+    min-width: 180px;
+  }
+}

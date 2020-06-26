@@ -1,0 +1,26 @@
+.brand {
+  $el: &;
+  $main: ".brand";
+
+  position: relative;
+  z-index: 2000;
+
+  #{$el}__container {
+    position: relative;
+    max-height: 50px;
+    overflow: hidden;
+  }
+
+  #{$el}__logo {
+    position: relative;
+    @include img__responsive;
+    max-height: 50px;
+    transition: transform 0.3s ease;
+
+    &--light {
+      position: absolute;
+      top: 0;
+      transform: translateY(-110%);
+    }
+  }
+}

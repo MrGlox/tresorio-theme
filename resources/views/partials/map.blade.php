@@ -1,0 +1,1 @@
+<div id="map" class="map" data-lat="{{ $coords['lat'] }}" data-lng="{{ $coords['lng'] }}"></div>

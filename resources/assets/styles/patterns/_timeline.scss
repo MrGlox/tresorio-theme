@@ -1,0 +1,245 @@
+.timeline {
+  $el: &;
+  $main: ".timeline";
+
+  #{$el}__content {
+    position: relative;
+    z-index: 2;
+    padding: $spxs 0;
+
+    @include breakpoints(sm) {
+      padding: $sp 0;
+    }
+
+    @include breakpoints(md) {
+      padding: $spxxxl 0;
+    }
+  }
+
+  #{$el}__stroke {
+    position: absolute;
+
+    &--start {
+      top: $spxxxs;
+      left: -4px;
+      height: 155px;
+      width: calc(50% - 8px);
+    }
+
+    &--end {
+      bottom: -4px;
+      left: 50%;
+      width: calc(#{span(2) - gutter()} - 10px);
+      transform: translateY(50%);
+    }
+  }
+
+  #{$el}__header {
+    position: relative;
+    width: span(6) + gutter();
+    margin: 100px 0;
+    padding: 0 0 0 50px;
+
+    &:after {
+      @include pseudo__content;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      position: absolute;
+      background-color: $primary;
+      border: solid 11px rgba($lightcolor, 75%);
+      width: 32px;
+      height: 32px;
+      border-radius: 30px;
+      transform: translateX(-50%);
+    }
+
+    &-stroke {
+      position: absolute;
+      top: $spxl;
+      left: -4px;
+      height: calc(100% + 46px);
+      width: 25px;
+    }
+  }
+
+  #{$el}__title {
+    margin-bottom: $sp;
+
+    &--year {
+      opacity: 0.12;
+      font-size: 100px;
+      font-weight: 600;
+      line-height: 60px;
+      margin-bottom: 50px;
+      margin-left: -3px;
+    }
+  }
+
+  #{$el}__text {
+    font-size: 14px;
+    line-height: 21px;
+
+    & > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  #{$el}__media {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: span(1) + gutter();
+    width: span(5);
+    transform: translateY(-50%);
+  }
+
+  #{$el}__img {
+    @include img__responsive;
+  }
+
+  #{$el}__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &-stroke {
+      position: absolute;
+      top: -4px;
+      left: span(1) / 2 - gutter() / 2 + span(1);
+      width: span(5.5) + gutter() / 2;
+    }
+  }
+
+  #{$el}__list {
+    display: flex;
+    flex-direction: column;
+    width: span(5);
+    margin-top: -$sp;
+    margin-bottom: 0;
+  }
+
+  #{$el}__item {
+    position: relative;
+    margin-left: span(1) + gutter() / 2;
+    padding-left: 65px;
+
+    &:after {
+      @include pseudo__content;
+      position: absolute;
+      top: $sp;
+      left: 0;
+      box-sizing: border-box;
+      position: absolute;
+      background-color: $primary;
+      border: solid 11px rgba($lightcolor, 75%);
+      width: 32px;
+      height: 32px;
+      border-radius: 30px;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    &-title {
+      opacity: 0.12;
+      font-size: 100px;
+      font-weight: 600;
+      line-height: 60px;
+      margin-bottom: 50px;
+      margin-left: -3px;
+    }
+
+    &-content {
+      font-size: 14px;
+      line-height: 21px;
+
+      & > p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-stroke {
+      position: absolute;
+      top: $spxxl;
+      left: -4px;
+      width: 8px;
+      height: calc(100% - #{$spxxxl});
+    }
+
+    &--first {
+      justify-self: start;
+      align-self: flex-start;
+      position: relative;
+      margin-top: 0;
+      margin-left: span(1) / 2 - gutter() / 4;
+      padding: $spxl gutter();
+      width: span(4) + gutter() * 2;
+
+      &:after {
+        top: 0 !important;
+        left: 0 !important;
+        transform: translateY(-50%) translateX(50%) !important;
+      }
+
+      #{$main}__subitem {
+        &-stroke {
+          top: $spxs;
+          left: -#{gutter() * 2};
+          height: 185px;
+          width: 40px;
+          transform: translateX(-100%) translateY(-100%);
+        }
+      }
+    }
+
+    &--last {
+      #{$el}__item {
+        &-stroke {
+          position: absolute;
+          top: $spxxl;
+          left: -4px;
+          width: 8px;
+          height: calc(100% - #{$spxxl});
+        }
+      }
+
+      #{$el}__sublist {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  #{$el}__sublist {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: $spxxl;
+    margin-top: $sp;
+  }
+
+  #{$el}__subitem {
+    position: relative;
+    margin-bottom: $sp;
+
+    &-title {
+      color: $primary;
+      margin-bottom: $spxxxs;
+    }
+
+    &-content {
+      font-size: 14px;
+      line-height: 21px;
+
+      & > p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-stroke {
+      position: absolute;
+      top: $spxxs;
+      left: -66px;
+      width: 50px;
+      transform: translateY(-50%);
+    }
+  }
+}

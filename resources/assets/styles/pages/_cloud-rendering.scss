@@ -1,0 +1,9 @@
+.cloud-rendering {
+  .packs .packs__title,
+  .packs .packs__text {
+    @include breakpoints(md) {
+      width: span(8);
+      max-width: 640px;
+    }
+  }
+}

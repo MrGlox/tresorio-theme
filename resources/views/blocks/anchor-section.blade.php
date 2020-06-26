@@ -1,0 +1,1 @@
+<div id="{{ $anchor }}" class="anchor"></div>

@@ -1,0 +1,89 @@
+.wpforms {
+	$el: &;
+
+	//in order to erase plugin css we need to wrap extra CSS in a container
+	body & {
+		&-container {
+			position: relative;
+
+			input[type="checkbox"],
+			input[type="radio"] {
+				margin-top: 0;
+				//Fit parent text size
+				width: 1em;
+				height: 1em;
+			}
+
+			//Required *
+			#{$el}-required-label {
+				color: $primary;
+			}
+
+			//Main form fields container
+			#{$el}-form {
+				#{$all-text-inputs} {
+					//Main input text style
+					position: relative;
+				}
+
+				#{$el}-head-container {
+					#{$el}-title {
+						//Title
+						position: relative;
+					}
+				}
+
+				#{$el}-field {
+					#{$el}-field-label {
+						//the label
+						position: relative;
+					}
+
+					#{$el}-field-sublabel {
+						//the sublabel
+						font-weight: 400;
+					}
+
+					//Errors Field input and label
+					#{$el}-error {
+						color: $error--light;
+						border-color: currentColor;
+						outline-color: currentColor;
+					}
+				}
+
+				//Custom Checkbox and radio. Remove it if you want browser based style
+				#{$el}-field-checkbox {
+					@include checkbox--custom($primary);
+				}
+
+				#{$el}-field-radio {
+					@include checkbox--custom($primary);
+					@include radio--custom();
+				}
+
+				//hide Honey pot
+				#{$el}-field-hp {
+					@extend .visuallyhidden;
+				}
+
+				//The submit button
+				#{$el}-submit {
+					@include button;
+				}
+			}
+		}
+
+		//After submit error
+		&-error-container {
+			@extend .message;
+			@extend .message--error;
+		}
+
+		//After submit success
+		&-confirmation-container {
+			@extend .message;
+			@extend .message--success;
+		}
+	}
+}

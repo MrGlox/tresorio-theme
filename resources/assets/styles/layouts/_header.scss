@@ -1,0 +1,117 @@
+.header {
+  $el: &;
+
+  position: absolute;
+  z-index: 1998;
+  top: $spxs;
+  padding: $spxs 0 $spxs;
+  margin-top: 1px;
+  width: 100vw;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    margin-top 0.3s ease, top 0.3s ease;
+
+  @include breakpoints(sm) {
+    top: $sp;
+  }
+
+  &--sticky {
+    margin-top: 0;
+    background-color: $lightcolor;
+    box-shadow: $shadow;
+  }
+
+  &--fixed {
+    // position: absolute !important;
+    // top: 0;
+
+    @include breakpoints(md) {
+      background-color: $lightcolor;
+      box-shadow: $shadow;
+    }
+  }
+
+  .withBlindfold &--fixed {
+    top: 0;
+  }
+
+  &--custom {
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    min-height: 10vh;
+    margin: $spl 0 $spl !important;
+  }
+
+  & > .container {
+    max-width: 640px;
+    padding: 0 $sps;
+
+    @include breakpoints(md) {
+      padding: 0 $spxs !important;
+      max-width: 1120px;
+    }
+  }
+
+  #{$el}__content {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+
+    @include breakpoints(md) {
+      justify-content: space-between;
+    }
+  }
+
+  #{$el}__brand {
+    width: span(1);
+  }
+
+  #{$el}__menu {
+    display: flex;
+    justify-content: space-between;
+    z-index: 998;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 100vw;
+    height: 100vh;
+    padding: $spxxl 0;
+    background: $darkgrey;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: right 0.5s ease-out;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+
+    @include breakpoints(md) {
+      position: relative;
+      right: auto;
+      top: auto;
+      overflow: inherit;
+      background: none;
+      width: 100%;
+      height: auto;
+      padding: 0;
+    }
+
+    & > .container {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column-reverse;
+      padding: $spxxxl 0 $spxxl;
+      max-width: 480px;
+      width: 100vw;
+
+      @include breakpoints(md) {
+        flex-direction: row;
+        justify-content: space-between;
+        width: span(11) + gutter();
+        padding: 0;
+        max-width: 1120px;
+      }
+    }
+  }
+}

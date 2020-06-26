@@ -1,0 +1,706 @@
+# Copyright (C) 2020 MrGlox
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tresorio 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tresorio\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-19T16:42:26+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+
+#. Theme Name of the theme
+msgid "Tresorio"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://roots.io/sage/"
+msgstr ""
+
+#. Description of the theme
+msgid "A custom made theme for Tresorio."
+msgstr ""
+
+#. Author of the theme
+msgid "MrGlox"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://github.com/MrGlox"
+msgstr ""
+
+#: app/Composers/CardCallToAction.php:26
+msgid "Card into the articles list"
+msgstr ""
+
+#: app/Composers/CardCallToAction.php:29
+msgid "Card details"
+msgstr ""
+
+#: app/Composers/CardCallToAction.php:32
+#: app/Composers/Hero.php:30
+#: app/Composers/Intro.php:32
+#: app/Composers/ThemeOptions.php:69
+#: app/Containers/ArticlesSection.php:16
+#: app/Containers/EntrySection.php:16
+#: app/Containers/IntroSection.php:16
+#: app/Containers/ListSection.php:25
+#: app/Containers/LogoSlider.php:16
+#: app/Containers/MediaSection.php:17
+#: app/Containers/PressArticlesSection.php:16
+#: app/Containers/PressArticlesSection.php:24
+#: app/Containers/SliderSection.php:16
+#: app/Containers/TabSection.php:22
+msgid "Title"
+msgstr ""
+
+#: app/Composers/CardCallToAction.php:34
+#: app/Composers/Hero.php:32
+msgid "Description"
+msgstr ""
+
+#: app/Composers/CardCallToAction.php:36
+#: app/Composers/Hero.php:34
+#: app/Composers/Intro.php:38
+#: app/Containers/EntrySection.php:29
+#: app/Containers/ListSectionInline.php:25
+#: app/Containers/LogoSlider.php:20
+#: app/Containers/MediaSection.php:24
+#: app/Containers/PacksSection.php:29
+#: app/Containers/PressArticlesSection.php:26
+#: app/Containers/RenderingSection.php:29
+#: app/Containers/ServerSection.php:22
+#: app/Containers/SliderSection.php:23
+#: app/Containers/TabSection.php:24
+msgid "Link details"
+msgstr ""
+
+#: app/Composers/Hero.php:26
+msgid "Hero section"
+msgstr ""
+
+#: app/Composers/Hero.php:35
+#: app/Containers/EntrySection.php:23
+#: app/Containers/IntroSection.php:23
+#: app/Containers/OffsetElement.php:16
+#: app/Containers/TimelineSection.php:20
+msgid "Main image"
+msgstr ""
+
+#: app/Composers/Hero.php:38
+msgid "Animation data"
+msgstr ""
+
+#: app/Composers/Intro.php:26
+#: app/Containers/IntroSection.php:13
+msgid "Introduction section"
+msgstr ""
+
+#: app/Composers/Intro.php:34
+#: app/Containers/ArticlesSection.php:18
+#: app/Containers/IntroSection.php:29
+#: app/Containers/ListSection.php:18
+#: app/Containers/ListSection.php:27
+#: app/Containers/ListSectionInline.php:18
+#: app/Containers/NumbersSection.php:18
+#: app/Containers/NumbersSection.php:28
+#: app/Containers/PacksSection.php:18
+#: app/Containers/PressArticlesSection.php:18
+#: app/Containers/RenderingSection.php:18
+#: app/Containers/ServerSection.php:18
+#: app/Containers/SliderSection.php:19
+#: app/Containers/TabSection.php:23
+#: app/Containers/TimelineSection.php:18
+#: app/Containers/TimelineSection.php:30
+msgid "Content"
+msgstr ""
+
+#: app/Composers/Intro.php:35
+msgid "Link"
+msgstr ""
+
+#: app/Composers/Intro.php:40
+msgid "File"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:14
+#: app/Composers/ThemeOptions.php:81
+msgid "Menu Settings"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:19
+msgid "Theme Options"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:21
+msgid "Main logo"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:23
+msgid "Main logo light"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:27
+msgid "Global settings"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:29
+msgid "Socials links"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:30
+msgid "Socials list"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:32
+#: app/Containers/SocialSection.php:17
+msgid "Social media"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:40
+#: app/Containers/SocialSection.php:26
+msgid "Link redirection"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:45
+msgid "Coords"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:48
+msgid "Secondary branding"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:50
+msgid "Contact address"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:53
+#: app/Composers/ThemeOptions.php:55
+msgid "Band"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:60
+msgid "Google map"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:62
+#: app/Composers/ThemeOptions.php:63
+msgid "Map"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:64
+msgid "Drag and drop the pin on the map to select location"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:67
+msgid "Page 404"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:70
+msgid "Main message"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:74
+msgid "Footer"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:76
+msgid "Copyright"
+msgstr ""
+
+#: app/Composers/ThemeOptions.php:83
+msgid "Item icon"
+msgstr ""
+
+#: app/Composers/Title.php:48
+msgid "Latest Posts"
+msgstr ""
+
+#: app/Composers/Title.php:58
+msgid "Search Results for %s"
+msgstr ""
+
+#: app/Composers/Title.php:64
+msgid "Not Found"
+msgstr ""
+
+#: app/Containers/AnchorSection.php:13
+msgid "Anchor section"
+msgstr ""
+
+#: app/Containers/AnchorSection.php:14
+#: app/Containers/ArticlesSection.php:14
+#: app/Containers/EntrySection.php:14
+#: app/Containers/IntroSection.php:14
+#: app/Containers/ListSection.php:14
+#: app/Containers/ListSectionInline.php:14
+#: app/Containers/LogoSlider.php:14
+#: app/Containers/MediaSection.php:14
+#: app/Containers/NumbersSection.php:14
+#: app/Containers/OffsetElement.php:14
+#: app/Containers/PacksSection.php:14
+#: app/Containers/PressArticlesSection.php:14
+#: app/Containers/RenderingSection.php:14
+#: app/Containers/ServerSection.php:14
+#: app/Containers/SliderSection.php:14
+#: app/Containers/TabSection.php:14
+#: app/Containers/TimelineSection.php:14
+msgid "Custom blocs"
+msgstr ""
+
+#: app/Containers/AnchorSection.php:16
+msgid "Name"
+msgstr ""
+
+#: app/Containers/ArticlesSection.php:13
+msgid "Articles section"
+msgstr ""
+
+#: app/Containers/EntrySection.php:13
+msgid "Content section"
+msgstr ""
+
+#: app/Containers/EntrySection.php:18
+#: app/Containers/IntroSection.php:18
+#: app/Containers/MediaSection.php:19
+msgid "Block content"
+msgstr ""
+
+#: app/Containers/EntrySection.php:20
+#: app/Containers/IntroSection.php:20
+msgid "Image block"
+msgstr ""
+
+#: app/Containers/EntrySection.php:24
+#: app/Containers/IntroSection.php:24
+#: app/Containers/OffsetElement.php:18
+msgid "Over size effect between sections"
+msgstr ""
+
+#: app/Containers/EntrySection.php:26
+#: app/Containers/MediaSection.php:21
+#: app/Containers/NumbersSection.php:20
+msgid "Call to action"
+msgstr ""
+
+#: app/Containers/IntroSection.php:26
+msgid "Items list"
+msgstr ""
+
+#: app/Containers/IntroSection.php:28
+#: app/Containers/MediaSection.php:40
+msgid "Label"
+msgstr ""
+
+#: app/Containers/ListSection.php:13
+msgid "List section"
+msgstr ""
+
+#: app/Containers/ListSection.php:16
+#: app/Containers/ListSectionInline.php:16
+#: app/Containers/NumbersSection.php:16
+#: app/Containers/PacksSection.php:16
+#: app/Containers/RenderingSection.php:16
+#: app/Containers/ServerSection.php:16
+#: app/Containers/TabSection.php:16
+#: app/Containers/TimelineSection.php:16
+msgid "Main title"
+msgstr ""
+
+#: app/Containers/ListSection.php:20
+#: app/Containers/ListSectionInline.php:20
+#: app/Containers/NumbersSection.php:21
+#: app/Containers/TimelineSection.php:22
+#: app/Containers/TimelineSection.php:26
+msgid "Links list"
+msgstr ""
+
+#: app/Containers/ListSection.php:22
+#: app/Containers/ListSectionInline.php:22
+#: app/Containers/PacksSection.php:25
+#: app/Containers/RenderingSection.php:25
+msgid "Icon"
+msgstr ""
+
+#: app/Containers/ListSectionInline.php:13
+msgid "Inline list section"
+msgstr ""
+
+#: app/Containers/LogoSlider.php:13
+msgid "Logos section"
+msgstr ""
+
+#: app/Containers/LogoSlider.php:17
+#: app/Containers/SliderSection.php:17
+msgid "Slider list"
+msgstr ""
+
+#: app/Containers/LogoSlider.php:19
+msgid "Profile picture"
+msgstr ""
+
+#: app/Containers/MediaSection.php:13
+msgid "Content section with media"
+msgstr ""
+
+#: app/Containers/MediaSection.php:16
+#: app/Containers/OffsetElement.php:13
+msgid "Decoration image"
+msgstr ""
+
+#: app/Containers/MediaSection.php:27
+msgid "Preview media"
+msgstr ""
+
+#: app/Containers/MediaSection.php:28
+msgid "Medias"
+msgstr ""
+
+#: app/Containers/MediaSection.php:30
+#: app/Containers/PressArticlesSection.php:28
+msgid "Media version"
+msgstr ""
+
+#: app/Containers/MediaSection.php:35
+msgid "Items"
+msgstr ""
+
+#: app/Containers/MediaSection.php:37
+#: app/Containers/NumbersSection.php:23
+msgid "Number"
+msgstr ""
+
+#: app/Containers/MediaSection.php:39
+#: app/Containers/NumbersSection.php:26
+msgid "Unit"
+msgstr ""
+
+#: app/Containers/NumbersSection.php:13
+msgid "Numbers section"
+msgstr ""
+
+#: app/Containers/OffsetElement.php:19
+msgid "Basically the image will be on the left, check to pass it on the right"
+msgstr ""
+
+#: app/Containers/PacksSection.php:13
+msgid "Section powerpacks"
+msgstr ""
+
+#: app/Containers/PacksSection.php:19
+#: app/Containers/RenderingSection.php:19
+msgid "Cards list"
+msgstr ""
+
+#: app/Containers/PacksSection.php:21
+#: app/Containers/RenderingSection.php:21
+msgid "Powerpack title"
+msgstr ""
+
+#: app/Containers/PacksSection.php:22
+#: app/Containers/RenderingSection.php:22
+msgid "Short label"
+msgstr ""
+
+#: app/Containers/PacksSection.php:23
+#: app/Containers/RenderingSection.php:23
+msgid "Components list"
+msgstr ""
+
+#: app/Containers/PacksSection.php:26
+#: app/Containers/RenderingSection.php:26
+msgid "Component label"
+msgstr ""
+
+#: app/Containers/PacksSection.php:28
+#: app/Containers/RenderingSection.php:28
+msgid "Price"
+msgstr ""
+
+#: app/Containers/PressArticlesSection.php:13
+msgid "Press list section"
+msgstr ""
+
+#: app/Containers/PressArticlesSection.php:19
+msgid "Articles list"
+msgstr ""
+
+#: app/Containers/PressArticlesSection.php:21
+msgid "Posted article date"
+msgstr ""
+
+#: app/Containers/PressArticlesSection.php:23
+msgid "Image"
+msgstr ""
+
+#: app/Containers/RenderingSection.php:13
+msgid "Section rendering packs"
+msgstr ""
+
+#: app/Containers/RenderingSection.php:31
+msgid "Calculations title block"
+msgstr ""
+
+#: app/Containers/RenderingSection.php:33
+msgid "Calculations link"
+msgstr ""
+
+#: app/Containers/ServerSection.php:13
+msgid "Animated server bloc"
+msgstr ""
+
+#: app/Containers/ServerSection.php:20
+msgid "Secondary title"
+msgstr ""
+
+#: app/Containers/SliderSection.php:13
+msgid "Slider section"
+msgstr ""
+
+#: app/Containers/SliderSection.php:20
+msgid "User picture"
+msgstr ""
+
+#: app/Containers/SliderSection.php:21
+msgid "Firstname and lastname"
+msgstr ""
+
+#: app/Containers/SliderSection.php:22
+msgid "Job and company"
+msgstr ""
+
+#: app/Containers/SocialSection.php:13
+msgid "Social medias"
+msgstr ""
+
+#: app/Containers/SocialSection.php:15
+msgid "Socials medias list"
+msgstr ""
+
+#: app/Containers/TabSection.php:13
+msgid "Tabs section"
+msgstr ""
+
+#: app/Containers/TabSection.php:17
+msgid "Tabs list"
+msgstr ""
+
+#: app/Containers/TabSection.php:19
+msgid "Tab icon"
+msgstr ""
+
+#: app/Containers/TabSection.php:21
+msgid "Category"
+msgstr ""
+
+#: app/Containers/TabSection.php:25
+msgid "Tab media"
+msgstr ""
+
+#: app/Containers/TabSection.php:26
+msgid "Tab movie"
+msgstr ""
+
+#: app/Containers/TimelineSection.php:13
+msgid "Timeline section"
+msgstr ""
+
+#: app/Containers/TimelineSection.php:24
+msgid "Year"
+msgstr ""
+
+#: app/Containers/TimelineSection.php:28
+msgid "Mounth"
+msgstr ""
+
+#: app/filters.php:84
+msgid "Continued"
+msgstr ""
+
+#: app/setup.php:91
+msgid "Primary Navigation"
+msgstr ""
+
+#: app/setup.php:92
+msgid "Utilities Navigation"
+msgstr ""
+
+#: app/setup.php:146
+msgid "Primary"
+msgstr ""
+
+#: app/setup.php:151
+msgid "Footer column 1"
+msgstr ""
+
+#: app/setup.php:156
+msgid "Footer column 2"
+msgstr ""
+
+#: app/setup.php:162
+msgid "Header"
+msgstr ""
+
+#: app/setup.php:172
+msgid "Newsletter block"
+msgstr ""
+
+#: functions.php:78
+msgid "Sage &rsaquo; Error"
+msgstr ""
+
+#: functions.php:88
+msgid "You must be using PHP 7.1.3 or greater."
+msgstr ""
+
+#: functions.php:88
+msgid "Invalid PHP version"
+msgstr ""
+
+#: functions.php:95
+msgid "You must be using WordPress 5.2 or greater."
+msgstr ""
+
+#: functions.php:95
+msgid "Invalid WordPress version"
+msgstr ""
+
+#: functions.php:103
+msgid "You must run <code>composer install</code> from the Sage directory."
+msgstr ""
+
+#: functions.php:104
+msgid "Autoloader not found."
+msgstr ""
+
+#: functions.php:119
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr ""
+
+#: functions.php:120
+msgid "File not found"
+msgstr ""
+
+#: functions.php:154
+msgid "Template for block %s not found"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Archives template"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Home template"
+msgstr ""
+
+#. Template Name of the theme
+msgid "About template"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Contact template"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Legal notice template"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Press template"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Product template"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Article template"
+msgstr ""
+
+#: storage/framework/views/0e572e0fbfdc014859716fe99e51cdc633266504.php:16
+msgid "CPU"
+msgstr ""
+
+#: storage/framework/views/0e572e0fbfdc014859716fe99e51cdc633266504.php:20
+msgid "Memory"
+msgstr ""
+
+#: storage/framework/views/0e572e0fbfdc014859716fe99e51cdc633266504.php:24
+msgid "Stockage"
+msgstr ""
+
+#: storage/framework/views/0e572e0fbfdc014859716fe99e51cdc633266504.php:29
+msgid "GPU"
+msgstr ""
+
+#: storage/framework/views/0e572e0fbfdc014859716fe99e51cdc633266504.php:36
+msgid "Switch price by hour or month"
+msgstr ""
+
+#: storage/framework/views/0e572e0fbfdc014859716fe99e51cdc633266504.php:41
+#: storage/framework/views/0e572e0fbfdc014859716fe99e51cdc633266504.php:52
+msgid "month"
+msgstr ""
+
+#: storage/framework/views/0e572e0fbfdc014859716fe99e51cdc633266504.php:43
+#: storage/framework/views/0e572e0fbfdc014859716fe99e51cdc633266504.php:53
+msgid "hour"
+msgstr ""
+
+#: storage/framework/views/0e572e0fbfdc014859716fe99e51cdc633266504.php:50
+#: storage/framework/views/97617fda81a574a85d3e95d85578fcd22918033b.php:31
+msgid "€"
+msgstr ""
+
+#: storage/framework/views/6d3a27be387a1483f83702cb7f88ed579ecfb0c7.php:25
+msgid "Back to home"
+msgstr ""
+
+#: storage/framework/views/6d3a27be387a1483f83702cb7f88ed579ecfb0c7.php:29
+msgid "See blog"
+msgstr ""
+
+#: storage/framework/views/6e8af78ddb67a0a920b7a460cff9defe1aa98f99.php:37
+msgid "Follow us !"
+msgstr ""
+
+#: storage/framework/views/97617fda81a574a85d3e95d85578fcd22918033b.php:23
+msgid "Multiply performances"
+msgstr ""
+
+#: storage/framework/views/97617fda81a574a85d3e95d85578fcd22918033b.php:28
+msgid "Total price"
+msgstr ""
+
+#: storage/framework/views/a143d51e81cffa38a07d5e70795b36c039eeb09d.php:15
+msgid "Tresorio's actuality"
+msgstr ""
+
+#: storage/framework/views/a143d51e81cffa38a07d5e70795b36c039eeb09d.php:17
+msgid "You will also like"
+msgstr ""
+
+#: storage/framework/views/a143d51e81cffa38a07d5e70795b36c039eeb09d.php:52
+#: storage/framework/views/c9d22220b0da5fc3b218caf259545125fcee8a1d.php:51
+msgid "See all articles"
+msgstr ""
+
+#: storage/framework/views/a760b1d8e79ffcbb8c26b9aee42006d02c98533c.php:12
+msgid "Close beta test banner"
+msgstr ""
+
+#: storage/framework/views/af1eaa1fb3221878e0367fff256ee42f095487ea.php:32
+msgid "Unselect"
+msgstr ""
+
+#: storage/framework/views/e31824678725b65cca7bab2cbb40b849acbf88c5.php:2
+msgid "Open menu"
+msgstr ""
+
+#: storage/framework/views/e31824678725b65cca7bab2cbb40b849acbf88c5.php:6
+msgid "Close menu"
+msgstr ""

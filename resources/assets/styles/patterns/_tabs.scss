@@ -1,0 +1,213 @@
+.tabs {
+  $el: &;
+  $main: ".tabs";
+
+  .r-tabs-accordion-title {
+    display: none;
+  }
+
+  #{$el}__header {
+    margin-bottom: $spl;
+  }
+
+  #{$el}__title {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  #{$el}__container {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoints(md) {
+      flex-direction: row;
+    }
+  }
+
+  #{$el}__list {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoints(md) {
+      width: span(6);
+      margin-right: span(1) + gutter();
+    }
+  }
+
+  #{$el}__item {
+    background-color: $lightcolor;
+    margin-bottom: $sps;
+
+    &.r-tabs-state-active > #{$main}__item-inner {
+      opacity: 1;
+      box-shadow: $shadow--larger;
+
+      & #{$main}__item-content {
+        max-height: 120px;
+        margin-bottom: $sp;
+      }
+
+      & #{$main}__item-link {
+        max-height: 70px;
+      }
+    }
+
+    &-inner {
+      position: relative;
+      display: flex;
+      border-radius: $br;
+      overflow: hidden;
+      padding: $sps span(1) $sps $spxxs;
+      opacity: 0.4;
+      transition: opacity 0.3s ease, box-shadow 0.3s ease;
+
+      &:after {
+        @include pseudo__content;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 8px;
+        background-color: $secondary;
+      }
+
+      @include hover {
+        opacity: 1;
+        box-shadow: $shadow--larger;
+
+        & #{$main}__item-content {
+          max-height: 70px;
+          margin-bottom: $sp;
+        }
+
+        & #{$main}__item-link {
+          max-height: 70px;
+        }
+      }
+    }
+
+    &-media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: #{span(4 of 6) + gutter(6)};
+      padding: 0 gutter(6);
+      margin-right: $spxxs;
+
+      @include breakpoints(sm) {
+        width: #{span(2 of 6) + gutter(6)};
+      }
+
+      & > svg {
+        @include img__responsive;
+        max-height: 130px;
+      }
+    }
+
+    &-img {
+      @include img__responsive;
+      max-height: 130px;
+    }
+
+    &-entry {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &-title {
+      font-size: 18px;
+      margin-bottom: $spxs;
+
+      @include breakpoints(md) {
+        font-size: 28px;
+      }
+
+      &--sub {
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: $fszxs;
+        color: $darkcolor;
+        margin-bottom: $spxxxs;
+
+        @include breakpoints(md) {
+          font-size: $fszs;
+        }
+      }
+    }
+
+    &-content {
+      margin-bottom: 0;
+      overflow: hidden;
+      max-height: 0;
+      color: $darkcolor;
+      font-size: $fszxs;
+      transition: max-height 0.3s ease, margin-bottom 0.7s ease;
+
+      @include breakpoints(md) {
+        font-size: $fszs;
+      }
+
+      & > p {
+        margin-bottom: 0;
+      }
+    }
+
+    &-link {
+      text-align: left;
+      color: $secondary;
+      font-weight: bold;
+      border: 0;
+      padding: 0;
+      overflow: hidden;
+      max-height: 0;
+      background-color: transparent;
+      transition-delay: 1s;
+      transition: max-height 0.7s ease, margin-bottom 0.7s ease;
+      cursor: pointer;
+
+      @include hover {
+        text-decoration: underline;
+        background-color: transparent;
+      }
+    }
+  }
+
+  #{$el}__media {
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+    margin-top: $spxl;
+
+    @include breakpoints(md) {
+      width: span(5);
+      margin-top: 0;
+    }
+
+    &.r-tabs-state-active {
+      display: none !important;
+
+      @include breakpoints(xsm) {
+        display: flex !important;
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  #{$el}__img {
+    @include img__responsive(650px);
+
+    @include breakpoints(md) {
+      position: absolute;
+      left: 0;
+      width: calc(50vw - 140px);
+    }
+  }
+}

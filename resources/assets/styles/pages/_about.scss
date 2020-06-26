@@ -1,0 +1,10 @@
+.page-template-page-about {
+  .intro {
+    padding-bottom: $sp;
+
+    &__offset {
+      max-width: 1200px;
+      min-width: 800px;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+/**
+ * Font Family
+ */
+$sans-serif: Arial, Helvetica, sans-serif;
+$serif: Times, Georgia, serif;
+
+$mainfont: "Avenir Next", $sans-serif;
+$headingsfont: "Raleway", $sans-serif;
+
+/**
+ * Font Size
+ */
+$fszxxs: 8px;
+$fszxs: 12px;
+$fszs: 14px;
+$fsz: 16px;
+$fszl: 18px;
+$fszxl: 20px;
+$hfsz: 24px;
+
+/**
+ * Line Height
+ */
+$lh: 1.4;
+$hlh: 1.2;
+
+// Avenir Next
+@include declare-font-face(
+  "Avenir Next",
+  "#{$fonts}/AvenirNext/AvenirNext-UltraLight",
+  200
+); //ultra-lightx200
+
+@include declare-font-face(
+  "Avenir Next",
+  "#{$fonts}/AvenirNext/AvenirNext-Regular",
+  400
+); //regularx400
+
+@include declare-font-face(
+  "Avenir Next",
+  "#{$fonts}/AvenirNext/AvenirNext-Italic",
+  400,
+  italic
+); //regularx400
+
+@include declare-font-face(
+  "Avenir Next",
+  "#{$fonts}/AvenirNext/AvenirNext-Medium",
+  500
+); //mediumx500
+
+@include declare-font-face(
+  "Avenir Next",
+  "#{$fonts}/AvenirNext/AvenirNext-DemiBold",
+  600
+); //semi-boldx600
+
+@include declare-font-face(
+  "Avenir Next",
+  "#{$fonts}/AvenirNext/AvenirNext-Bold",
+  700
+); //boldx700
+
+// Raleway
+@include declare-font-face(
+  "Raleway",
+  "#{$fonts}/Raleway/raleway-light-webfont",
+  300,
+  italic
+); //lightx300
+
+@include declare-font-face(
+  "Raleway",
+  "#{$fonts}/Raleway/raleway-semibold-webfont",
+  600,
+  italic
+); //semiboldx600

@@ -1,0 +1,173 @@
+.widget_icl_lang_sel_widget {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  max-width: 52px;
+  background-color: transparent;
+  margin-bottom: $spxl;
+
+  @include breakpoints(md) {
+    margin-bottom: 0;
+  }
+
+  .wpml-ls-item-toggle {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 52px;
+    height: 34px;
+    background-color: rgba($lightcolor, 0.1);
+    border: solid 1px $lightcolor;
+    border-radius: $br;
+
+    @include breakpoints(md) {
+      background-color: rgba($primary, 0.1);
+      border: solid 1px $primary;
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 5px !important;
+      border: none !important;
+      height: 5px;
+      width: 8px;
+      background-image: url("#{$icons}/down.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  .wpml-ls-flag {
+    transform: scale(1.4);
+  }
+}
+
+.widget__menu {
+  & > h3 {
+    @extend .visuallyhidden;
+  }
+
+  .menu {
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  .menu-item a {
+    @include button;
+  }
+}
+
+.widget_nav_menu {
+  h3 {
+    text-transform: uppercase;
+    font-size: $fsz;
+    line-height: 24px;
+    margin-bottom: $sp;
+  }
+
+  ul li {
+    margin-bottom: $sps;
+  }
+
+  a {
+    font-size: $fszs;
+
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+
+  .menu {
+    $el: &;
+
+    position: static;
+    padding: 0;
+    background-color: transparent;
+
+    #{$el}__item {
+    }
+  }
+}
+
+// REMOVE HUBSPOT CHAT WIDGET
+body #hubspot-messages-iframe-container {
+  display: none !important;
+  top: 110vh !important;
+}
+
+#cookie-notice {
+  width: 100vw;
+  min-width: 100vw;
+  box-shadow: $shadow;
+  padding: $spxxs 0;
+
+  .cn-notice-text {
+    a {
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .cookie-notice-container {
+    @include container;
+    padding: $sps;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include breakpoints(xsm) {
+      justify-content: flex-end;
+    }
+
+    @include breakpoints(md) {
+      flex-wrap: nowrap;
+      align-items: center;
+      align-content: center;
+      justify-content: flex-start;
+    }
+
+    #cn-notice-text {
+      text-align: left;
+      order: 1;
+      font-weight: 500;
+      font-size: $fszs;
+
+      @include breakpoints(md) {
+        margin-right: span(1 of 10) + gutter(10);
+      }
+    }
+
+    #cn-refuse-cookie {
+      display: flex;
+      align-items: center;
+      order: 2;
+      white-space: nowrap;
+      text-decoration: underline;
+      font-weight: 600;
+      color: $darkcolor;
+      margin-right: gutter(10);
+
+      @include hover {
+        text-decoration: none;
+      }
+    }
+
+    #cn-accept-cookie {
+      @include button;
+      @include button--colored(
+        darken($secondary, 3%),
+        $lightcolor,
+        darken($secondary, 5%)
+      );
+      white-space: nowrap;
+      order: 3;
+      font-size: $fszs;
+      line-height: $fsz;
+      padding: $spxs $sps;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+}

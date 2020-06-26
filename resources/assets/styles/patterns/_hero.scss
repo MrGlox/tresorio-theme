@@ -1,0 +1,206 @@
+.hero {
+  $el: &;
+  $main: ".hero";
+
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+
+  & > .container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+
+  #{$el}__offset {
+    position: absolute;
+    z-index: 1;
+    bottom: 50%;
+    left: 50%;
+    width: 2500px;
+    min-width: 100vw;
+    transform: translateX(-50%) translateY(39%);
+
+    @include breakpoints(xsm) {
+      transform: translateX(-60%) translateY(44%);
+    }
+
+    @include breakpoints(sm) {
+      transform: translateX(-65%) translateY(50%);
+    }
+
+    @include breakpoints(md) {
+      transform: translateX(-50%) translateY(39%);
+    }
+  }
+
+  #{$el}__particles {
+    position: absolute;
+    pointer-events: none;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 1200px;
+    min-width: 80vw;
+  }
+
+  #{$el}__container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoints(md) {
+      flex-direction: row;
+    }
+  }
+
+  #{$el}__content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    @include breakpoints(sm) {
+      align-content: flex-start;
+      align-items: flex-start;
+    }
+
+    @include breakpoints(md) {
+      width: span(6) + gutter();
+    }
+  }
+
+  #{$el}__title {
+    text-align: center;
+    margin-bottom: $sp;
+
+    @include breakpoints(sm) {
+      text-align: left;
+    }
+  }
+
+  #{$el}__text {
+    font-size: $fszs;
+    text-align: center;
+
+    @include breakpoints(sm) {
+      font-size: $fszl;
+      text-align: left;
+    }
+
+    @include breakpoints(md) {
+      width: span(5 of 6);
+    }
+
+    b {
+      color: $secondary;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  #{$el}__media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: $spxxl;
+    padding-bottom: $sp;
+
+    @include breakpoints(sm) {
+      margin-top: $spxxxl;
+    }
+
+    @include breakpoints(md) {
+      width: span(6);
+      min-height: 500px;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    &--animated {
+      #{$main}__img {
+        display: none;
+      }
+    }
+  }
+
+  #{$el}__img,
+  #{$el}__data {
+    @include img__responsive(span(10));
+
+    @include breakpoints(md) {
+      @include img__responsive(100%);
+    }
+  }
+
+  #{$el}__data {
+    height: 100%;
+  }
+
+  #{$el}__button {
+    @include button;
+    margin-top: $spl;
+  }
+
+  &--product {
+    padding-top: 150px;
+
+    .breadcrumbs {
+      position: relative;
+      z-index: 100;
+      width: 100%;
+      margin-bottom: $spl;
+    }
+
+    #{$el}__container {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      align-content: flex-start;
+      padding-bottom: $spxxl;
+    }
+
+    #{$el}__content {
+      @include breakpoints(sm) {
+        position: relative;
+        z-index: 2;
+      }
+
+      &:after {
+        @include pseudo__content;
+        position: absolute;
+        z-index: -1;
+        bottom: $sp;
+        left: 50%;
+        height: 100vh;
+        width: 110vw;
+        background-color: $mediumgrey;
+        transform: translateX(-50%);
+
+        @include breakpoints(md) {
+          left: 100%;
+        }
+      }
+    }
+
+    #{$el}__button {
+      position: absolute;
+      bottom: 0;
+
+      @include breakpoints(sm) {
+        position: static;
+      }
+    }
+
+    #{$el}__media {
+      position: relative;
+      z-index: 2;
+      margin: $spxxl auto 0;
+    }
+  }
+}
